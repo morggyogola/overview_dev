@@ -1,0 +1,8 @@
+<ul>
+<%= for user <- @users do %>
+
+ <li><%= user.id %>-<%=user.name%> - <%=user.email%></li>
+
+ <%end %>
+
+</ul>

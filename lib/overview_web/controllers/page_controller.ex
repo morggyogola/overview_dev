@@ -7,11 +7,14 @@ defmodule OverviewWeb.PageController do
     render(conn, :home, layout: false)
   end
 
-  def users (conn, _params)do
+  def users(conn, _params)do
+
     users=[
-      %{id=>1,name=>"Philip",email=>"philipgor@gmail.com"},
-      %{id=>2,name=>"Musa",email=>"musaj@gmail.com"}
+
+      %{id: 1, name: "Philip", email: "philipgor@gmail.com"},
+      %{id: 2, name: "Musa", email: "musaj@gmail.com"}
+
     ]
-    render(conn, :home)
+    render(conn,:users,users: users)
   end
 end
