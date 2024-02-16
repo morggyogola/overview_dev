@@ -21,7 +21,15 @@ defmodule OverviewWeb.UserJSON do
       id: user.id,
       name: user.name,
       email: user.email,
-      posts: user.posts
+      posts: for(post <- user.posts, do: post_data(post))
+    }
+  end
+
+  defp data(%Post{} = post) do
+    %{
+      id: post.id,
+      body: post.body,
+      title: post.title
     }
   end
 end
