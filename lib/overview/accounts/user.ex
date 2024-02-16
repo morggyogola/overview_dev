@@ -6,7 +6,6 @@ defmodule Overview.Accounts.User do
     field :name, :string
     field :email, :string
     has_many :posts, Overview.Posts.Post
-
     timestamps(type: :utc_datetime)
   end
 
