@@ -1,5 +1,6 @@
 defmodule OverviewWeb.UserJSON do
   alias Overview.Accounts.User
+  alias Overview.Posts.Post
 
   @doc """
   Renders a list of users.
@@ -19,7 +20,8 @@ defmodule OverviewWeb.UserJSON do
     %{
       id: user.id,
       name: user.name,
-      email: user.email
+      email: user.email,
+      posts: user.posts
     }
   end
 end
